@@ -4,24 +4,55 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Cat App</title>
   </head>
   <body>
-    <form class="body-form">
-      <h1 class="body-title">The Cats App</h1>
-      <div class="search-boxes">
-        <h2 class="sub-title">Number of cats facts</h2>
-        <input type="text" class= "facts-input" id="factInput" placeholder="number of cat facts (50 max)" />
-        <button class="submit">Submit</button>
-        <h2 class="sub-title">Number of cats photos</h2>
-        <input type="text" class= "photos-input" id="photoInput" placeholder="number of cat photos (50 max)" />
-        <button class="submit">Submit</button>
-      </div>
-    </form>
-    <script type="module" src="/src/main.js"></script>
+    <div class="container">
+      <h1>The Cats App</h1>
+
+      <form class="body-form">
+        <div class="search-box">
+          <h2 class="sub-title">Number of cats facts (50 maximum)</h2>
+          <div class="search-input">
+            <input
+            type="number"
+            class="info-input"
+            id="factInput"
+            placeholder="number of cat facts (50 max)"
+          />
+          <button class="submit">Submit</button>
+          </div>
+        </div>
+
+        <div class="search-box">
+          <h2 class="sub-title">Number of cats photos (10 max)</h2>
+          <div class="search-input">
+            <input
+            type="number"
+            class="info-input"
+            id="photoInput"
+            placeholder="number of cat photos (10 max)"
+          />
+          <button class="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>

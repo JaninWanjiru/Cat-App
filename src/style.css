@@ -9,14 +9,84 @@ html {
 }
 
 :root {
-  --color-pinkish: #ffc0cb;
-  --color-purplish: #e7b9f1;
+  --color-pinkish: #fad0c4;
+  --color-purplish: #c599b6;
   --color-white-smoke: #fafafa;
   --color-black: #191818;
 }
 
 body {
-  font-family:"Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--color-white-smoke);
   text-align: center;
+}
+
+.container {
+  background-color: var(--color-pinkish);
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+  padding-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.body-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9rem;
+  padding-top: 0rem 2rem;
+  min-height: 100%;
+  text-align: center;
+  display: flex;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-block: 4rem;
+}
+
+.search-input{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sub-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.info-input {
+  padding: 1.8rem 2rem;
+  width: 300px;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-style: italic;
+}
+
+::placeholder {
+  font-size: 1.7rem;
+  color: var(--color-purplish);
+}
+
+button {
+  padding: 1.7rem;
+  font-size: 1.8rem;
+  background: var(--color-purplish);
+  color: var(--color-white-smoke);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  margin-left: 0.3rem;
+}
+
+@media screen and (max-width: 56.25em) {
+  .body-form {
+    gap: 2rem;
+  }
 }
