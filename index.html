@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="images/icon.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,6 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"
+      integrity="sha512-FPlUpimug7gt7Hn7swE8N2pHw/+oQMq/+R/hH/2hZ43VOQ+Kjh25rQzuLyPz7aUWKlRpI7wXbY6+U3oFPGjPOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -29,12 +35,12 @@
           <h2 class="sub-title">Number of cats facts (50 maximum)</h2>
           <div class="search-input">
             <input
-            type="number"
-            class="info-input"
-            id="factInput"
-            placeholder="number of cat facts (50 max)"
-          />
-          <button class="submit">Submit</button>
+              type="number"
+              class="info-input"
+              id="factInput"
+              placeholder="number of cat facts (50 max)"
+            />
+            <button class="submit-fact-btn">Submit</button>
           </div>
         </div>
 
@@ -42,17 +48,19 @@
           <h2 class="sub-title">Number of cats photos (10 max)</h2>
           <div class="search-input">
             <input
-            type="number"
-            class="info-input"
-            id="photoInput"
-            placeholder="number of cat photos (10 max)"
-          />
-          <button class="submit">Submit</button>
+              type="number"
+              class="info-input"
+              id="photoInput"
+              placeholder="number of cat photos (10 max)"
+            />
+            <button class="submit-photo-btn">Submit</button>
           </div>
         </div>
       </form>
     </div>
 
-    <script type="module" src="./src/main.js"></script>
+    <div class="result"></div>
+
+    <script src="./src/main.js"></script>
   </body>
 </html>

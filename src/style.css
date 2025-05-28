@@ -26,38 +26,39 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.2rem;
   font-weight: bolder;
   padding-top: 5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.3rem;
 }
 
 .body-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 9rem;
-  padding-top: 0rem 2rem;
-  min-height: 100%;
+  gap: 11.5rem;
+  padding: 0rem 3rem;
   text-align: center;
-  display: flex;
+}
+
+.sub-title {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
 }
 
 .search-box {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
   margin-block: 4rem;
+  min-width: 320px;
 }
 
-.search-input{
+.search-input {
   display: flex;
   flex-wrap: wrap;
-}
-
-.sub-title {
-  font-size: 2rem;
-  text-transform: capitalize;
+  gap: 0.1rem;
 }
 
 .info-input {
@@ -75,7 +76,7 @@ h1 {
 }
 
 button {
-  padding: 1.7rem;
+  padding: 1.7rem 2rem;
   font-size: 1.8rem;
   background: var(--color-purplish);
   color: var(--color-white-smoke);
@@ -85,8 +86,85 @@ button {
   margin-left: 0.3rem;
 }
 
-@media screen and (max-width: 56.25em) {
+@media screen and (max-width: 54.625em) {
   .body-form {
     gap: 2rem;
+    flex-direction: column;
+    align-items: center;
   }
+  .search-box {
+    align-items: center;
+    margin-block: 1.5rem;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .sub-title {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .search-input {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .info-input {
+    width: 280px;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    outline: none;
+    height: 5rem;
+  }
+
+  button {
+    padding: 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    padding-top: 2rem;
+  }
+}
+
+.spinner {
+  text-align: center;
+  padding: 7rem;
+  font-size: 17rem;
+  color: var(--color-purplish);
+}
+
+.fa-spinner {
+  animation: fa-spin 2s infinite linear;
+}
+
+.facts-results {
+  text-align: left;
+  padding-left: 15rem;
+  margin-top: 5rem;
+  font-size: 2rem;
+  line-height: 3.5rem;
+}
+
+.photos-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center; 
+}
+
+.image-container {
+  position: relative;
+  width: 300px; 
+  height: 300px; 
+  overflow: hidden;
+  border-radius: 0.8rem;
+}
+
+.cat-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
