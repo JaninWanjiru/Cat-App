@@ -1,21 +1,19 @@
-// Select HTML elements
 const factInput = document.getElementById("factInput");
 const photoInput = document.getElementById("photoInput");
 const factButton = document.querySelector(".submit-fact-btn");
 const photoButton = document.querySelector(".submit-photo-btn");
 const resultDiv = document.querySelector(".result");
 
-// Show loading spinner using innerHTML
+
 function showSpinner() {
   const spinnerHTML = `<div class="spinner"><i class="fa-solid fa-spinner fa-spin"></i></div>`;
   resultDiv.innerHTML = spinnerHTML;
 }
 
-// Handle facts submission
+
 async function getCatFacts() {
   let numberOfFacts = Number(factInput.value);
 
-  // Limit between 1 and 50
   if (numberOfFacts <= 0) {
     numberOfFacts = 1;
   } else if (numberOfFacts > 50) {
@@ -24,7 +22,7 @@ async function getCatFacts() {
 
   const apiURL = `https://meowfacts.herokuapp.com/?count=${numberOfFacts}`;
 
-  showSpinner(); // Show spinner while loading
+  showSpinner();
 
   try {
     const response = await axios.get(apiURL);
@@ -38,15 +36,14 @@ async function getCatFacts() {
       resultDiv.innerHTML = `<ol class="facts-results">${factItems}</ol>`;
     }
   } catch (error) {
-    resultDiv.innerHTML = `<p class="error">Failed to load cat facts: ${error.message}</p>`;
+    resultDiv.innerHTML = `<p>Failed to load cat facts</p>`;
   }
 }
 
-// Handle photos submission
+
 async function getCatPhotos() {
   let numberOfPhotos = Number(photoInput.value);
 
-  // Limit between 1 and 10
   if (numberOfPhotos <= 0) {
     numberOfPhotos = 1;
   } else if (numberOfPhotos > 10) {
@@ -55,16 +52,16 @@ async function getCatPhotos() {
 
   const apiURL = `https://api.thecatapi.com/v1/images/search?limit=${numberOfPhotos}`;
 
-  showSpinner(); // Show spinner while loading
+  showSpinner(); 
 
   try {
     const response = await axios.get(apiURL);
     const photoData = response.data;
 
-    if (photoData && Array.isArray(photoData)) {
+    if (photoData && Array.isArray(photoData, numberOfPhotos)) {
       let photosHTML = `<div class="photos-results">`;
 
-      for (let i = 0; i < photoData.length; i++) {
+      for (let i = 0; i < numberOfPhotos; i++) {
         const photo = photoData[i];
         photosHTML = photosHTML + `<div class="image-container">`;
         photosHTML =
@@ -77,17 +74,17 @@ async function getCatPhotos() {
       resultDiv.innerHTML = photosHTML;
     }
   } catch (error) {
-    resultDiv.innerHTML = `<p class="error">Failed to load cat photos: ${error.message}</p>`;
+    resultDiv.innerHTML = `<p>Failed to load cat photos</p>`;
   }
 }
 
-// Add event listeners to buttons
+
 factButton.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent form from submitting
+  event.preventDefault(); 
   getCatFacts();
 });
 
 photoButton.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent form from submitting
+  event.preventDefault(); 
   getCatPhotos();
 });
