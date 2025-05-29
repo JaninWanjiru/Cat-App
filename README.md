@@ -24,6 +24,9 @@ It uses the [MeowFacts API](https://meowfacts.herokuapp.com/) and [TheCatAPI](ht
 2. Enter the number of facts or photos you want (limit: 1–50 facts, 1–10 photos).
 3. Click the corresponding button to fetch data.
 
+## ✅ Live Demo
+https://janinwanjiru.github.io/Cat-App/
+
 ## 📌Notes
 - Ensure you have an internet connection to access the external APIs and CDN libraries.
 - The project gracefully handles invalid input and failed API requests.
