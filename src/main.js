@@ -6,7 +6,7 @@ const resultDiv = document.querySelector(".result");
 
 
 function showSpinner() {
-  const spinnerHTML = `<div class="spinner"><i class="fa-solid fa-spinner fa-spin"></i></div>`;
+  const spinnerHTML = `<div class="spinner"><i class="fa-solid fa-circle-notch"></i></div>`;
   resultDiv.innerHTML = spinnerHTML;
 }
 

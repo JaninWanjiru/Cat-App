@@ -135,7 +135,7 @@ button {
   color: var(--color-purplish);
 }
 
-.fa-spinner {
+.fa-circle-notch {
   animation: fa-spin 2s infinite linear;
 }
 
