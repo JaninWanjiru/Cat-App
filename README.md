@@ -31,6 +31,3 @@ https://janinwanjiru.github.io/Cat-App/
 - Ensure you have an internet connection to access the external APIs and CDN libraries.
 - The project gracefully handles invalid input and failed API requests.
 
----
-
-Feel free to modify this file to fit your assignment or submission requirements.
